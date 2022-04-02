@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+    "use strict";
+
+
+    //функции
+       //функция mathOperation определяет какое действие нужно выполнить и 
+       //какую функцию нужно вызвать с помощью switch
+
+       function mathOperation(arg1, arg2, operation) {
+           switch (operation) {
+               case "/": return divideNum(arg1, arg2);
+               case "+": return addNum(arg1, arg2);
+               case "-": return subtractNum(arg1, arg2);
+               case "*": return multiplyNum(arg1, arg2);
+               default: return NaN;   
+           }
+       }
+          
+     
+     //сложение
+      function addNum(arg1, arg2) {
+         return (arg1+arg2);
+      }
+     //разность
+      function subtractNum(arg1, arg2) {
+       return (arg1-arg2);
+      }
+      //умножение
+      function multiplyNum(arg1, arg2) {
+        return (arg1*arg2);
+      }
+      //деление
+      function divideNum(arg1, arg2) {
+        return (arg1/arg2);
+      }
+</script>   
+</html>
